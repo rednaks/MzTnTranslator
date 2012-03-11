@@ -1,0 +1,3 @@
+content		MzTnTranslate	content/
+overlay chrome://browser/content/browser.xul chrome://MzTnTranslate/content/MzTnTranslateOverlay.xul
+

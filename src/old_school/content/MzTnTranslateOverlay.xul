@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+
+<overlay id="MzTnTranslate-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="chrome://MzTnTranslate/content/MzTnTranslateOverlay.js"/>
+
+<menupopup id="contentAreaContextMenu">
+	<menuitem id="MzTnTranslate" label="Translate the selection" oncommand="MzTnTranslate.BrowserOverlay.select(); event.stopPropagation();"/>
+</menupopup>
+
+</overlay>
