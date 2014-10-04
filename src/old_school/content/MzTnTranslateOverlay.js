@@ -18,14 +18,16 @@ MzTnTranslate.BrowserOverlay = {
 
  	// XMLHttpRequest()
 	var req = new XMLHttpRequest(); // i don't know if this will work
-	url = 'http://rednaks.alwaysdata.net/translate/?text=' + encodeURIComponent(text);
+	url = 'http://translate.rednaks.tn/api/v1/?text=' + encodeURIComponent(text);
 	//alert(url); //debug 
 	req.open('GET',url,false);
 	req.send(null);
 	if(req.status == 200){
 		//alert(req.responseText);// debug
+    console.log(req.responseText);
+    json = JSON.parse(req.responseText);
 		selection.deleteContents(); // delete the selectet content
-		selection.insertNode(document.createTextNode(req.responseText));
+		selection.insertNode(document.createTextNode(json.translated));
 		
 }	
 	
