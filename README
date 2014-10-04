@@ -1,7 +1,16 @@
 Mozilla Tunisia Translator : A firefox extension.
 
+Create the addon package : 
+=========================
 
-TODO : 
-  1- Localization support
-  2- Manual configuration
+old_school way : 
+----------------
 
+<pre> <code>
+  cd src/old_school/
+  zip -r  ../../xpi/old_school.xpi * </code> </pre>
+
+
+Jetpack :
+---------
+TODO
