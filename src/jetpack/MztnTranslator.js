@@ -6,11 +6,13 @@ var cm = require("context-menu");
   contentScript: 'self.on("click", self.postMessage);',
   onMessage: function () {
     require("request").Request({
-    	url: "http://rednaks.alwaysdata.net/translate/",
+url: "http://translate.rednaks.tn/api/v1/",
+    contentType: "application/json"
 		content : {
 			text: selection.text},
 		onComplete: function(response) {
-            selection.text = response.text; //debug
+            console.log(response.json);
+            selection.text = response.json.translated; //debug
 		}}).get();
 
     
